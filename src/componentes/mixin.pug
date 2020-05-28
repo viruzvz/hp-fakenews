@@ -1,24 +1,59 @@
-mixin card(classes, href, src, time, record, txt, txt1, txt2)
-  .mb-4(class= classes)
-    a(href= href).card.card-play.card-effect
-      .embed-responsive
-        img.rounded-0.card-img(src= src alt='card')
-        .hoverplay.middle
-          .fa-stack
-            i.fa.fa-circle.fa-stack-1x.cut.size--large.ml-1
-            i.fa.fa-play-circle.fa-stack-1x.gray-dark.size--xlarge
-      if time
-        time.timer.bg-black.px-2.white(text='1:53:33') 1:53:33
+// card
+mixin card(header, name, body)
+  .card.rounded-0.mt-4
+    .card-header.text-center.p-1.rounded-0.text-uppercase(class=header)
+      = name
+    .card-body.p-0(class=body)
+      if block
+        block
       else
-      if record
-        .record.p-3.shadowc.white
-          .record-live.bg-red-cord
-          span.size--small.ml-1.mr-1.font-weight-bold AO VIVO
-      else
-      .card-body.p-3
-        p.size--regular.blue-play.font-weight-bold.card-title
-          = txt
-        p.size--regular.mb-1.card-subtitle.blue-play
-          = txt1
-        p.size--regular.card-text
-          = txt2
+        p no content provided
+    .card-footer.py-1
+      .text-right
+        +vermais
+// card fotos
+mixin itemfoto(src, alt)
+  .item
+    img.img-fluid(src=src, alt=alt)
+// item padrão fotos
+mixin vermais
+  a.link--blue-link(href='#') 
+    | Ver mais &nbsp;
+    span.size--small.fas.fa-caret-right
+// navbar
+mixin lidropdown-nav(name)
+  li.nav-item.dropdown
+    a#navbarDropdown.nav-link.link--dark.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')= name
+    .dropdown-menu.rounded-0(aria-labelledby='navbarDropdown')
+      a.dropdown-item(href='#') Action
+      a.dropdown-item(href='#') Another action
+      .dropdown-divider
+      a.dropdown-item(href='#') Something else here
+      span.sr-only (current)
+// li mixins
+mixin li-comunicados(date)
+  li
+    .border-bottom.mb-4
+      p.gray-light
+        date= date
+      p
+        a.link--blue-link(href=~'#') Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quas asperiores laudantium eos nobis iusto nulla libero accusamus eum necessitatibus, repellendus sed error? Commodi necessitatibus eligendi a ipsa. Sint, cumque.
+      p.text-right
+        +vermais
+mixin li-videos(src)
+  li
+    .mb-2
+      a.link--blue-link(href='#').media
+        img.mr-3(src=src, alt='...',)
+        .media-body.pb-2
+          .size--small  Cras sit amet nibh libe, in gvida nulla. Cum quas asperiores laudantium
+mixin li-notificacoes(myclass, src, name)
+  li(class=myclass)
+    .border-bottom.mb-2
+      a.link--blue-link(href='#').media
+        span.badge-status.badge--border-md.badge--success.badge--content-none.badge--userposition
+          img.mr-3(src=src, alt='...', width='35px')
+        .media-body.pb-2
+          h5.size--regular.mt-0.mb-1
+            strong= name
+          .size--small  Cras sit amet nibh libe, in gvida nulla. Cum quas asperiores laudantium

@@ -1,26 +1,16 @@
+include ../componentes/mixin.pug
 ul.navbar-nav.mr-auto
-  li.nav-item.active
-    a.nav-link(href='#')
-      | Notícias
-      span.sr-only (current)
-  li.nav-item
-    a.nav-link(href='#') Pessoas
-  li.nav-item
-    a.nav-link(href='#') SIS/Saúde
-  li.nav-item
-    a.nav-link(href='#') Educação
-  li.nav-item
-    a.nav-link(href='#') Administração
-  li.nav-item.dropdown
-    a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-      | Informação e Documentação 
-    .dropdown-menu(aria-labelledby='navbarDropdown')
-      a.dropdown-item(href='#') Action
-      a.dropdown-item(href='#') Another action
-      .dropdown-divider
-      a.dropdown-item(href='#') Something else here
-
-
-
-
-    
+  +lidropdown-nav('Notícias')
+  +lidropdown-nav('Pessoas')
+  +lidropdown-nav('SIS/Saúde')
+  +lidropdown-nav('Educação')
+  +lidropdown-nav('Administração')
+  +lidropdown-nav('Informação e Documentação')
+ul.navbar-nav.m-0
+  li
+    label.bg-gray-basic.badge.badge-secondary.m-0.p-2
+      a.link--dark.size--xregular.p-2(data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample")
+        .fas.fa-search
+      span 
+      a.link--dark.size--xregular.p-2(href='#')
+        .fas.fa-question

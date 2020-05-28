@@ -1,0 +1,41 @@
+.badge-status{
+    position: relative;
+    &:after{
+        position: absolute;
+        content: '!';
+        width: 15px;
+        height: 15px;
+        right: -10px;
+        top: -5px;
+        background-color: $red-cord;
+        text-align: center;
+        border-radius: 50%;
+    }
+}
+.badge--content-none{
+  &:after{
+    content: '';
+  }
+}
+.badge--success{
+  &:after{
+    background-color: $success;
+  }
+}
+.badge--md{
+  &:after{
+    width: 20px;
+    height: 20px;
+  }
+}
+.badge--userposition{
+  &:after{
+    right: 10px;
+    top: 0px;
+  }
+}
+.badge--border-md{
+  &:after{
+    border:2px solid $white
+  }
+}

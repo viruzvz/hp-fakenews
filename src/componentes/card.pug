@@ -1,0 +1,40 @@
+include ../componentes/mixin.pug
+
++card('white bg-orange','Fotos','bg-gray-basic')
+  .d-flex.align-items-start
+    +itemfoto('https://unsplash.it/300/300?random&seed=0','Img description')
+    +itemfoto('https://unsplash.it/300/300?random&seed=1','Img description')
+    +itemfoto('https://unsplash.it/300/300?random&seed=2','Img description')
+  .d-flex.align-items-start
+    +itemfoto('https://unsplash.it/300/300?random&seed=3','Img description')
+    +itemfoto('https://unsplash.it/300/300?random&seed=4','Img description')
+    +itemfoto('https://unsplash.it/300/300?random&seed=5','Img description')
+  .d-flex.align-items-start
+    +itemfoto('https://unsplash.it/300/300?random&seed=6','Img description')
+    +itemfoto('https://unsplash.it/300/300?random&seed=7','Img description')
+    +itemfoto('https://unsplash.it/300/300?random&seed=8','Img description')
+
++card('white bg-gray-default','Vídeos','bg-gray-basic')
+  .nano.nano-height--xs
+    .nano-content.py-2
+      ul.list-unstyled
+        +li-videos('https://unsplash.it/100/55?random&seed=9')
+        +li-videos('https://unsplash.it/100/55?random&seed=10')
+        +li-videos('https://unsplash.it/100/55?random&seed=11')
+        +li-videos('https://unsplash.it/100/55?random&seed=12')
+        +li-videos('https://unsplash.it/100/55?random&seed=13')
+        +li-videos('https://unsplash.it/100/55?random&seed=14')
+        +li-videos('https://unsplash.it/100/55?random&seed=15')
+
++card('blue-link bg-white-far','Feed Servidores','bg-white-far')
+  .nano.nano-height--xs
+    .nano-content.py-2.px-2
+      ul.list-unstyled
+        +li-notificacoes('','assets/user.svg','Usuário 1')
+        +li-notificacoes('','assets/user.svg','Usuário 1')
+        +li-notificacoes('','assets/user.svg','Usuário 1')
+        +li-notificacoes('','assets/user.svg','Usuário 1')
+        +li-notificacoes('','assets/user.svg','Usuário 1')
+        +li-notificacoes('','assets/user.svg','Usuário 1')
+
++card('blue-link bg-white-far','Feed Comunidades','bg-white-far')

@@ -6,10 +6,16 @@
 .gray-fox {color: $gray-fox;}
 .gray-basic {color: $gray-basic;}
 .gray-default {color: $gray-default;}
+.gray-light {color: $gray-light;}
+.gray-far {color: $gray-far;}
 .cut {color: $cut;}
 .white {color: $white;}
+.white-far {color: $white-far;}
+.white-str {color: $white-str;}
+.blue-link {color: $blue-link;}
 .blue-play {color: $blue-play;}
 .red-cord {color: $red-cord;}
+.orange {color:$orange;}
 .shadowc {text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);}
 
 .bg-negative {background-color: $negative;}
@@ -18,11 +24,47 @@
 .bg-gray-fox {background-color: $gray-fox;}
 .bg-gray-basic {background-color: $gray-basic;}
 .bg-gray-default {background-color: $gray-default;}
+.bg-gray-light {background-color: $gray-light;}
+.bg-gray-far {background-color: $gray-far;}
 .bg-cut {background-color: $cut;}
 .bg-white {background-color: $white;}
+.bg-white-far {background-color: $white-far;}
+.bg-white-str {background-color: $white-str;}
+.bg-blue-link {background-color: $blue-link;}
 .bg-blue-play {background-color: $blue-play;}
 .bg-red-cord {background-color: $red-cord;}
+.bg-orange {background-color:$orange;}
 .bg-gradient {@extend %caption-gradient;}
+
+// SET INTRANET COLORS
+.color1 {color:$color-1;}
+.color2 {color:$color-2;}
+.color3 {color:$color-3;}
+.color4 {color:$color-4;}
+.color5 {color:$color-5;}
+.color6 {color:$color-6;}
+.color7 {color:$color-7;}
+.color8 {color:$color-8;}
+.color9 {color:$color-9;}
+.color10 {color:$color-10;}
+.color11 {color:$color-11;}
+.color12 {color:$color-12;}
+.color13 {color:$color-13;}
+
+.bg-color1 {background-color:$color-1;}
+.bg-color2 {background-color:$color-2;}
+.bg-color3 {background-color:$color-3;}
+.bg-color4 {background-color:$color-4;}
+.bg-color5 {background-color:$color-5;}
+.bg-color6 {background-color:$color-6;}
+.bg-color7 {background-color:$color-7;}
+.bg-color8 {background-color:$color-8;}
+.bg-color9 {background-color:$color-9;}
+.bg-color10 {background-color:$color-10;}
+.bg-color11 {background-color:$color-11;}
+.bg-color12 {background-color:$color-12;}
+.bg-color13 {background-color:$color-13;}
+
 // SYSTEM SIZE
 .size--xlarge {font-size: $xlarge}
 .size--large {font-size: $large}
@@ -58,12 +100,23 @@ html, body{
 		text-decoration: none;
 	}
 }
-.link--dark {
-	color: $gray-fox;
+.link--blue-link {
+	color: $blue-link;
 	transition: $linktransition;
 	border: none;
 	&:hover, &:focus, &:active {
 		color: $blue-play;
+		border: none;
+		outline: none;
+		text-decoration: none;
+	}
+}
+.link--dark {
+	color: $white;
+	transition: $linktransition;
+	border: none;
+	&:hover, &:focus, &:active {
+		color: $orange;
 		border: none;
 		outline: none;
 		text-decoration: none;

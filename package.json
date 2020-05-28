@@ -41,9 +41,11 @@
     "webpack-dev-server": "^3.10.1"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "bootstrap": "^4.5.0",
     "g": "^2.0.1",
     "jquery": "^3.4.0",
+    "nanoscroller": "^0.8.7",
     "popper.js": "^1.15.0",
     "yarn": "^1.21.1"
   }

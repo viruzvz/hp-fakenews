@@ -30,13 +30,13 @@ const htmlPlugins = generateHtmlPlugins('./src')
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
   output: {
-    path: path.resolve(__dirname, './tv/dist'),
+    path: path.resolve(__dirname, './dist'),
     filename: '[name].[contenthash:5].bundle.js',
     publicPath: '/'
   },
   // apenas para CDN
-  // externals: {
-  //   'jquery': 'jQuery'
+  //  externals: {
+  //  'jquery': 'jQuery'
   // },
   devServer: {
     contentBase: path.resolve('./src'),

@@ -1,16 +1,47 @@
-nav.navbar.navbar-expand-lg.navbar-dark.bg-gray-dark
+include ../componentes/mixin.pug
+nav.navbar.navbar-expand-lg.navbar-dark.bg-gray-dark.shadow-sm
   .container
     .w-100
       .row
         .col-3
           .bd-style
-            a.navbar-brand.text-uppercase(href='#') Intranet
-            a.m-3(href='#') c
-            a.m-3(href='#') n
-            a.ml-3(href='#') t
+            a.link--dark.navbar-brand.text-uppercase.m-0(href='#' title='Home') Intranet
+            span
+              a#dropdownMenuButton1.js-fixnano.setbeeper.link--dark.m-3.position-relative(href='#' data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title='Comunicados')
+                .badge-status.fas.fa-comment-dots
+                .beeper
+              .dropdown-menu.w-100.border-top-0.rounded-0(aria-labelledby='dropdownMenuButton1')
+                a.dropdown-item 
+                  strong Comunicados
+                .dropdown-divider
+                .nano.nano-height--xs
+                  .nano-content.py-2.px-4
+                    ul.list-unstyled
+                      +li-comunicados('22/05/2020 - 13h20')
+                      +li-comunicados('21/05/2020 - 12h00')
+                      +li-comunicados('20/05/2020 - 11h30')
+                      +li-comunicados('19/05/2020 - 10h40')
+            span
+              a#dropdownMenuButton2.js-fixnano.setbeeper.link--dark.m-3.position-relative(href='#' data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title='Notificações')
+                .badge-status.fas.fa-bell
+                .beeper
+              .dropdown-menu.w-100.border-top-0.rounded-0(aria-labelledby='dropdownMenuButton2')
+                a.dropdown-item
+                  strong Notificações
+                .dropdown-divider
+                .nano.nano-height--xs
+                  .nano-content.py-2.px-4
+                    ul.list-unstyled
+                      +li-notificacoes('','assets/user.svg','Usuário 1')
+                      +li-notificacoes('','assets/user.svg','Usuário 2')
+                      +li-notificacoes('','assets/user.svg','Usuário 3')
+                      +li-notificacoes('','assets/user.svg','Usuário 4')
+                      +li-notificacoes('','assets/user.svg','Usuário 5')
+            a.link--dark.ml-3(href='#' title='Minimizar barra usuário')
+              .fas.fa-sliders-h
         .col-9
           button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarColor01', aria-controls='navbarColor01', aria-expanded='false', aria-label='Toggle navigation')
             span.navbar-toggler-icon
           #navbarColor01.collapse.navbar-collapse
             include nav.pug
-            form.form-inline
+

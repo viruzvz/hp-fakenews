@@ -1,11 +1,17 @@
-section.parallax-parent--bg.page-section.p-4(role='Sobre')
-  .parallax.parallax-img.position-relative#sobre
-    .container
-      .row
-        .col-12
-          .d-flex.flex-column.justify-content-center.h-100
-            h2.mt-2.mb-4.text-center.set-color--primary Açaí Tuíra
-            p.set-size--xl.text-justify.set-color--primary O açaizeiro é nativo da Amazônia e cresce em touceiras com várias palmeiras. Quando o seu fruto atinge uma coloração preta, coberta parcialmente por uma finíssima camada branca, é designado pelos ribeirinhos de açaí tuíra. É o ápice do sabor e do aroma da fruta, o ponto máximo de sua maturação e o momento ideal para a extração e  consumo. Essa informação serve de base para a escolha do elemento nominativo (naming) da marca. Serve também como orientação para a escolha da polpa e da proposta comercial da empresa, que tem como objetivo oferecer o melhor açaí para seus clientes.
-    .position-absolute.w-100.bottom--60
-      .text-center
-        img.img-fluid(src='../assets/imagens/acai.png' alt='Imagem de sementes de açaí sobre desenhos da indentidade visual, desenho indígenas brasileiros.')
+mixin feed(src)
+  .feed.mt-4
+    a.size--xmiddle.link--blue-link(href='#')
+      img.img-fluid(src=src)
+      p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste repudiandae, fuga ab voluptate tenetur aut optio esse 
+.container
+  .row
+    .col-3
+      include ../componentes/sidebar.pug
+    .col-6
+      .banner.mt-4
+        img.img-fluid(src='https://unsplash.it/1200/250?random&seed=0')
+      +feed('https://unsplash.it/1200/800?random&seed=1')
+      +feed('https://unsplash.it/1200/800?random&seed=2')
+      +feed('https://unsplash.it/1200/800?random&seed=3')
+    .col-3
+      include ../componentes/card.pug
