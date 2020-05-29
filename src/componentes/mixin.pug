@@ -12,9 +12,10 @@ mixin card(header, name, body)
       .text-right
         +vermais
 // card fotos
-mixin itemfoto(src, alt)
-  .item
-    img.img-fluid(src=src, alt=alt)
+mixin itemfoto(link, src, alt)
+  .embed-res.embed-res-2by2
+    a.link-pictures(href=link, data-toggle="lightbox", data-gallery="example-gallery", data-type="image").item
+      img.img-fluid(src=src, alt=alt)
 // item padrão fotos
 mixin vermais
   a.link--blue-link(href='#') 
@@ -30,7 +31,7 @@ mixin lidropdown-nav(name)
       .dropdown-divider
       a.dropdown-item(href='#') Something else here
       span.sr-only (current)
-// li mixins
+// Tipo de listas
 mixin li-comunicados(date)
   li
     .border-bottom.mb-4
@@ -40,13 +41,15 @@ mixin li-comunicados(date)
         a.link--blue-link(href=~'#') Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quas asperiores laudantium eos nobis iusto nulla libero accusamus eum necessitatibus, repellendus sed error? Commodi necessitatibus eligendi a ipsa. Sint, cumque.
       p.text-right
         +vermais
-mixin li-videos(src)
+mixin li-videos(link, src, title)
   li
     .mb-2
-      a.link--blue-link(href='#').media
-        img.mr-3(src=src, alt='...',)
+      a.link--play.media(href=link, data-toggle="lightbox" data-gallery="youtubevideos")
+        .max-width.mr-2
+          .embed-res.embed-res-16by9
+            img.mr-3.img-fluid(src=src, alt='...',)
         .media-body.pb-2
-          .size--small  Cras sit amet nibh libe, in gvida nulla. Cum quas asperiores laudantium
+          .size--small= title
 mixin li-notificacoes(myclass, src, name)
   li(class=myclass)
     .border-bottom.mb-2

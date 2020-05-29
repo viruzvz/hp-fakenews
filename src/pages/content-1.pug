@@ -1,17 +1,20 @@
 mixin feed(src)
-  .feed.mt-4
+  .feed.mt-4.bg-color-white.border.shadow-sm.p-3.position-relative
+    .badge-social.bg-white.shadow-sm.badge-social--position
+      i.fas.fa-thumbs-up.circle-social.bg-blue-play.white.size--small
+      span.ml-1 0
     a.size--xmiddle.link--blue-link(href='#')
       img.img-fluid(src=src)
-      p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste repudiandae, fuga ab voluptate tenetur aut optio esse 
+      p.size--lightmedium Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste repudiandae, fuga ab voluptate tenetur aut optio esse 
 .container
   .row
-    .col-3
+    .col-sm-3
       include ../componentes/sidebar.pug
-    .col-6
+    .col-sm-6
       .banner.mt-4
         img.img-fluid(src='https://unsplash.it/1200/250?random&seed=0')
       +feed('https://unsplash.it/1200/800?random&seed=1')
       +feed('https://unsplash.it/1200/800?random&seed=2')
       +feed('https://unsplash.it/1200/800?random&seed=3')
-    .col-3
+    .col-sm-3
       include ../componentes/card.pug

@@ -4,7 +4,7 @@ import 'popper.js'
 import 'bootstrap'
 import 'babel-polyfill'
 import nanoScroller from 'nanoscroller'
-// import 'ekko-lightbox'
+import 'ekko-lightbox'
 // import Stickyfill from 'stickyfilljs'
 import $ from 'jquery'
 window.jQuery = $
@@ -24,6 +24,11 @@ $('#collapseExample').on('shown.bs.collapse', function () {
 // Fecha collapse clicando fora do target, clicando na tela. 
 $(document).click(function(e) {
 	if (!$(e.target).is('.js-closeoutside')) {
-    	$('.js-collapse-search').collapse('hide');	    
+    	$('.js-collapse-search').collapse('hide')   
     }
-});
+})
+// Lightbox, efeito para abrir fotos e videos
+$(document).on('click', '[data-toggle="lightbox"]', function (event) {
+  event.preventDefault()
+  $(this).ekkoLightbox()
+})
