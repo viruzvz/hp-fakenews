@@ -18,8 +18,10 @@
 .blue-play {color: $blue-play;}
 .red-cord {color: $red-cord;}
 .orange {color:$orange;}
+
 .shadowc {text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);}
 
+.bg-none {background-color: transparent;}
 .bg-negative {background-color: $negative;}
 .bg-blue-senado {background-color: $blue-senado;}
 .bg-black {background-color: $black;}
@@ -94,15 +96,27 @@ html, body{
   width: 100%;
 }
 // SYSTEM LINK
+@mixin hoverlink {
+	border: none;
+	outline: none;
+	text-decoration: none;
+}
+.link-success {
+	color: $white;
+	transition: $linktransition;
+	border: none;
+	&:hover, &:focus, &:active {
+		color: $success;
+		@include hoverlink;
+	}
+}
 .link--cut {
 	color: $cut;
 	transition: $linktransition;
 	border: none;
 	&:hover, &:focus, &:active {
 		color: $white;
-		border: none;
-		outline: none;
-		text-decoration: none;
+		@include hoverlink;
 	}
 }
 .link--blue-link {
@@ -111,9 +125,7 @@ html, body{
 	border: none;
 	&:hover, &:focus, &:active {
 		color: $blue-play;
-		border: none;
-		outline: none;
-		text-decoration: none;
+		@include hoverlink;
 	}
 }
 .link-pictures {
@@ -132,9 +144,7 @@ html, body{
 	border: none;
 	&:hover, &:focus, &:active {
 		color: $orange;
-		border: none;
-		outline: none;
-		text-decoration: none;
+		@include hoverlink;
 	}
 }
 .link--card {
@@ -142,9 +152,7 @@ html, body{
 	transition: $linktransition;
 	&:hover, &:focus, &:active {
 		color: $gray-dark;
-		border: none;
-		outline: none;
-		text-decoration: none;
+		@include hoverlink;
 	}
 }
 .link--blueplay {
@@ -153,38 +161,57 @@ html, body{
 	border: none;
 	&:hover, &:focus, &:active {
 		color: $red-cord;
-		border: none;
-		outline: none;
+		@include hoverlink;
+	}
+}
+.link--clear {
+	border-bottom: 1px solid $white-str;
+	transition: $linktransition;
+	color:$gray-far;
+	&:hover {
+		background-color: $orange;
+		color:$white;
 		text-decoration: none;
 	}
 }
-.link--play {
-	color: $cut;
+.link--clear2 {
 	transition: $linktransition;
-	border: none;
-	position: relative;
-	&:after {
-		content:"\f144";
-		font-family: 'Font Awesome 5 Free';
-		font-weight: 900;
-		color: $cut;
-		font-size: 32px;
-		top:5% ;
-		left: 13%;
-		position: absolute;
-	}
-	&:hover {
-		color: $orange;
-		&:after {
-			color: $orange;
-		}
+	color:$gray-far;
+	&:hover, &:focus, &:active {
+		color:$blue-senado;
+		text-decoration: none;
 	}
 }
+// .link--play {
+// 	color: $cut;
+// 	transition: $linktransition;
+// 	border: none;
+// 	position: relative;
+// 	&:after {
+// 		content:"\f144";
+// 		font-family: 'Font Awesome 5 Free';
+// 		font-weight: 900;
+// 		color: $cut;
+// 		font-size: 32px;
+// 		top:5% ;
+// 		left: 13%;
+// 		position: absolute;
+// 	}
+// 	&:hover {
+// 		color: $orange;
+// 		&:after {
+// 			color: $orange;
+// 		}
+// 	}
+// }
 // BORDERS
 // BODY
 body {
 	line-height: 1.4;
 	background-color: $white;
+	font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif;
+	font-weight: 300;
+	font-size: 14px;
 }
 // POSITIONS SIDES
 .psr-0 {right: 0;}
@@ -260,10 +287,22 @@ body {
 	}
 }
 @include media-breakpoint-down(md) {
+	.hide {
+		display: none;
+	}
 	.minimum-sticky-12 {
 		width: 100%;
 		min-height: 100px;
 		display: flex;
 		flex-wrap: wrap;
 	}
+}
+.circle {
+	height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: inline-flex;
+	align-items: center;
+	flex-direction: column;
+	line-height: 1;
 }

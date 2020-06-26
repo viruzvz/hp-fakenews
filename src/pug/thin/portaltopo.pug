@@ -1,0 +1,49 @@
+
+.container
+
+  .PortalTopo.u-spacer-xs
+
+    .PortalTopo-id.PortalTopo-id--wide
+      .PortalTopo-title
+        a.flat(href='home.html')
+          img.LogoPortal(src='assets/logo.svg')
+
+
+    .PortalTopo-togglers.visible-xs
+      button.PortalTopo-toggler--search(data-toggle='collapse', data-target='.PortalTopo-busca')
+        .glyphicon.glyphicon-search
+      button.PortalTopo-toggler--menu(data-toggle='collapse', data-target='.Nav--principal')
+        .Icon.Icon--menu.Icon--md
+
+    .PortalTopo-busca.collapse
+      include ../commons/search.pug
+
+    .clearfix
+
+  nav.Nav--principal.navbar.navbar-default.navbar-collapse.nav-collapse.collapse(role="navigation")
+    ul.nav.navbar-nav
+      li: a(href='home.html') Fato ou Fake?
+      li: a(href='apresentacao.html#apresentacao') Apresentação
+      li: a(href='apresentacao.html#comoparticipar') Como participar
+      li: a(href='apresentacao.html#identificar') Como identificar notícias falsas
+      li: a(href='#') Política de uso
+      //- li.dropdown
+      //-   a.dropdown-toggle(href='#', data-toggle='dropdown')
+      //-     = 'Consulte '
+      //-     span.caret
+      //-   ul.dropdown-menu
+      //-     li: a(href='#') Bases Históricas
+      //-     li: a(href='#') SICON
+
+  nav.Nav--secundaria.hidden-xs
+    ul.nav.navbar-nav.pull-right
+      //- li: a(href='http://www12.senado.leg.br/jornal') Jornal do Senado
+      //- li: a(href='http://www12.senado.gov.br/noticias') Senado Notícias
+      //- li: a(href='http://www.senado.leg.br/noticias/tv') TV Senado
+
+.container
+  ol.Breadcrumbs
+    li: a Home
+    //- li: a Constituição Federal
+    //- li: a Emendas Constituicionais
+    //- li.active EC nº 35

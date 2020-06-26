@@ -1,0 +1,58 @@
+mixin box(class1, status, img, class2, logostatus, href, classp, text)
+  .Segments.u-spacer--xl
+    .Box(class=class1).Box--flush
+      a(href='materia.html')
+        .Embed.Embed--3by2
+          img.box-coverimg(src=status)
+          img.image-responsive.box-imgcover(src=img)
+      .box-caption(class=class2)
+        .row
+          .col-xs-6.u-spacer--xl
+            img(src=logostatus width='80px')
+          .col-xs-6.text-right.u-spacer--xl
+            .pull-right
+              .dropdown
+                a.pointer#dropdownMenu1.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='true' title='compartilhar')
+                  img(src='assets/share.svg' width='30px')
+                ul.dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenu1')
+                  li
+                    a(href='#') 
+                      i.Icon.Icon--facebook
+                      | &nbsp; Facebook
+                  li
+                    a(href='#')
+                      i.Icon.Icon--instagram
+                      | &nbsp; Instagram
+                  li
+                    a(href='#')
+                      i.Icon.Icon--twitter
+                      | &nbsp; Twitter
+                  li
+                    a(href='#')
+                      i.Icon.Icon--whatsapp
+                      | &nbsp; Whatsapp
+          .col-md-12
+            p.text-right.date 09/06/2020
+            if href
+              a(href='materia.html')
+                p(class=classp)= text
+            else
+              p(class=classp)= text
+mixin box-aside(class1, class2, text, text1)
+  .Box.Box--xl.bg-gray.box-aside.u-spacer--xl(class=class1)
+    p.eta(class=class2)
+      strong= text
+    a(href='materia.html').ellipse= text1
+
+mixin media(class1, src, class2, status)
+  .Media.u-spacer--xl
+    .Media-figure.u-size1of4
+      .Embed.Embed--16by9
+        a(href='materia.html')
+          img.img-responsive.img-full(src=src, alt='title', class=class1)
+    .Media-body
+      p.date 09/04/2020
+      p(class=class2)
+        strong= status
+      a.Manchete-titulo(href='materia.html')
+        span.titulo.eta Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita voluptate harum voluptatum praesentium numquam amet 

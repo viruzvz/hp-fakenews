@@ -4,14 +4,11 @@ html(lang='pt')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-    title Intranet 2020
+    title Senado verifica
   body
-    include partials/navGlobal.pug
-    block header
-      include partials/header.pug
-    block search
-      include componentes/search.pug
+    include pug/commons/navglobal
+    include pug/commons/mixin
+    include pug/thin/portaltopo
     block content
-      include pages/content-1.pug
-    block footer
-      include partials/footer.pug 
+      include pug/content/home.pug
+    include pug/thin/footer-sem-ga
