@@ -7382,6 +7382,9 @@ body {
 .box-border--top-red {
     border-top: 2px solid #a52822;
 }
+.box-border--top-white {
+    border-top: 2px solid white;
+}
 .bg-gray {
     background-color: #ebebeb;
 }
