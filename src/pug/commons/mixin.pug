@@ -44,7 +44,7 @@ mixin box-aside(class1, class2, text, text1)
       strong= text
     a(href='materia.html').ellipse= text1
 
-mixin media(class1, src, class2, status)
+mixin media(class1, src, class2, status, text)
   .Media.u-spacer--xl
     .Media-figure.u-size1of4
       .Embed.Embed--16by9
@@ -55,4 +55,4 @@ mixin media(class1, src, class2, status)
       p(class=class2)
         strong= status
       a.Manchete-titulo(href='materia.html')
-        span.titulo.eta Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita voluptate harum voluptatum praesentium numquam amet 
+        span.titulo.eta= text
