@@ -7397,11 +7397,20 @@ body {
 .c-orange {
     color: #d88600;
 }
+.selo {
+    position: absolute;
+    top: -50px;
+    left: 10px;
+    max-width: 100px;
+    z-index: 3;
+    transform: rotate(-20deg);
+}
 .box-caption {
-    min-height: 200px;
+    position: relative;
+    min-height: 100px;
 }
 .box-caption--p4 {
-    padding: 15px;
+    padding: 0 15px;
 }
 .box-coverimg {
     z-index: 2;
@@ -7418,7 +7427,7 @@ body {
 .pointer {
     cursor: pointer;
 }
-.date {
+.color-gray {
     color: #999;
 }
 .ellipse {
@@ -7431,6 +7440,7 @@ body {
 .box-h2 {
     margin-top: 0;
     margin-bottom: 15px;
+    line-height: 1.4;
 }
 .nav-tabs--template .nav-tabs {
     border-bottom: none;
