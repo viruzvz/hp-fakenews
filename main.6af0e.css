@@ -7438,7 +7438,7 @@ body {
     text-overflow: ellipsis;
 }
 .box-h2 {
-    margin-top: 0;
+    margin-top: 5px;
     margin-bottom: 15px;
     line-height: 1.4;
 }
