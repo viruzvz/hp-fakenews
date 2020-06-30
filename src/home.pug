@@ -11,9 +11,10 @@ block content
               a(href='#todas', aria-controls='todas', role='tab', data-toggle='tab') Todas
           .tab-content
             #recentes.tab-pane.active(role='tabpanel')
-              +box('box-border--red','assets/fn-red.svg','img/materias/materia1/imagem_materia.jpg','box-caption--p4','assets/fake.svg','href','beta','É falso que Senado esteja analisando uma "Lei da Proteção Doméstica", contra a liberdade religiosa')
-              +box('box-border--red','assets/fn-red.svg','img/materias/materia2/imagem_materia.jpg','box-caption--p4','assets/fake.svg','href','beta','Mensagens que apontam indução de voto em consulta sobre projetos são falsas')
-              +box('box-border--orange','assets/fn-orange.svg','img/materias/materia3/imagem_materia.jpg','box-caption--p4','assets/impreciso.svg','href','beta','Senado nas redes sociais: tome cuidado com perfis falsos ou enganosos')
+              +box('box-border--red','assets/fn-red.svg','img/materias/materia1/imagem_materia.jpg','box-caption--p4','assets/fake.svg','','href','box-h2','É falso que Senado esteja analisando uma "Lei da Proteção Doméstica", contra a liberdade religiosa')
+              +box('box-border--red','assets/fn-red.svg','img/materias/materia2/imagem_materia.jpg','box-caption--p4','assets/fake.svg','','href','box-h2','Mensagens que apontam indução de voto em consulta sobre projetos são falsas')
+              +box('box-border--orange','assets/fn-orange.svg','img/materias/materia3/imagem_materia.jpg','box-caption--p4','assets/impreciso.svg','','href','box-h2','Senado nas redes sociais: tome cuidado com perfis falsos ou enganosos')
+              //- +box('box-border--green','assets/fn-fato.svg','img/materias/materia3/imagem_materia.jpg','box-caption--p4','assets/fato.svg','','href','box-h2','Senado nas redes sociais: tome cuidado com perfis falsos ou enganosos')
             #todas.tab-pane(role='tabpanel')
               +media('box-border--top-orange', 'img/materias/materia3/imagem_materia.jpg','c-orange','IMPRECISO','Senado nas redes sociais: tome cuidado com perfis falsos ou enganosos')
               +media('box-border--top-red', 'img/materias/materia1/imagem_materia.jpg','c-red','FAKE','É falso que Senado esteja analisando uma "Lei da Proteção Doméstica", contra a liberdade religiosa')
